@@ -50,24 +50,3 @@ def record_audio(RECORD_SECONDS, WAVE_OUTPUT_FILENAME):
 
     # closing the wave file object
     waveFile.close()
-
-def read_audio(WAVE_FILENAME):
-    # function to read audio(wav) file
-    with open(WAVE_FILENAME, 'rb') as f:
-        audio = f.read()
-    return audio
-
-def RecognizeSpeech(AUDIO_FILENAME, num_seconds = 5):
-
-    # record audio of specified length in specified audio file
-    record_audio(num_seconds, AUDIO_FILENAME)
-
-    # reading audio
-    audio = read_audio(AUDIO_FILENAME)
-
-    # WIT.AI HERE
-    # ....
-
-if __name__ == "__main__":
-    while True:
-        text =  RecognizeSpeech('myspeech.wav', 4)
