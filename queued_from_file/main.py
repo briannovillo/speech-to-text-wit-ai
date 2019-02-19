@@ -1,18 +1,18 @@
 from recognize import recognize
-from read import read_and_delete_first_audio
+from file import read_file, delete_file
 from time import sleep
+import sys
 
-def RecognizeSpeechEverySeconds(num_seconds = 10):
-    # sleep for n seconds instead record a file
-    sleep(num_seconds)
+def RecognizeSpeechAndRemoveFile(AUDIO_FILENAME):
+    print("Recognize and remove file", AUDIO_FILENAME)
 
     # reading audio
-    audio = read_and_delete_first_audio()
+    audio = read_file(AUDIO_FILENAME)
+
+    delete_file(AUDIO_FILENAME)
 
     # send to WIT.AI
-    if(audio):
-        recognize(audio)
+    recognize(audio)
 
 if __name__ == "__main__":
-    while True:
-        text =  RecognizeSpeechEverySeconds(10)
+    text =  RecognizeSpeechAndRemoveFile(sys.argv[1])

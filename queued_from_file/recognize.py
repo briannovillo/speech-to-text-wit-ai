@@ -12,5 +12,7 @@ def recognize(audio):
     resp = requests.post(API_ENDPOINT, headers = headers, data = audio)
 
     #Get the text
-    data = json.loads(resp.content)
-    print(data["_text"])
+    data = json.loads(resp.content.decode('utf-8'))
+
+    if(len(data["_text"]) > 0):
+        print(data["_text"])

@@ -14,9 +14,9 @@ Record speaker audio every 10 seconds on a file with timestamp name inside ./sou
 ```
 sh record-from-speaker.sh
 ```
-Send first file on ./sounds to WIT.AI every 10 seconds and remove file
+Watch folder ./sounds, send each new file to WIT.AI and remove them
 ```
-python main.py
+sh watch-records-and-recognize.sh
 ```
 
 - live_from_file:
