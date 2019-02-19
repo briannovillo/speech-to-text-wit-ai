@@ -9,6 +9,7 @@
 sh install.sh
 ```
 ### You can run different modes on each folder:
+------
 - queued_from_file (*best mode*):
 
 Record speaker audio every 10 seconds on a file with timestamp name inside ./sounds folder
@@ -19,19 +20,20 @@ Send first file on ./sounds to WIT.AI every 10 seconds and remove file
 ```
 python main.py
 ```
-
+------
 - live_from_file:
-Record speaker audio every 10 seconds on record.wav file
+Record speaker audio every 10 seconds on same record.wav file
 ```
 sh record-from-speaker.sh
 ```
-Send file to WIT.AI every 10 seconds
+Send same file to WIT.AI every 10 seconds
 ```
 python main.py
 ```
-
+------
 - live_from_mic:
 Record microphone every 10 seconds on record.wav file and send to WIT.AI
 ```
 python main.py
 ```
+------
