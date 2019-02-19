@@ -14,4 +14,4 @@ def RecognizeSpeech(AUDIO_FILENAME, num_seconds = 5):
 
 if __name__ == "__main__":
     while True:
-        text =  RecognizeSpeech('example.wav', 5)
+        text =  RecognizeSpeech('record.wav', 10)
