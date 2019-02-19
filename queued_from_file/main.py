@@ -4,7 +4,7 @@ from time import sleep
 import sys
 
 def RecognizeSpeechAndRemoveFile(AUDIO_FILENAME):
-    print("Recognize and remove file", AUDIO_FILENAME)
+    #print("Recognize and remove file", AUDIO_FILENAME)
 
     # reading audio
     audio = read_file(AUDIO_FILENAME)
