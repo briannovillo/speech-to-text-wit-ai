@@ -10,6 +10,7 @@ sh install.sh
 ```
 ### You can run different modes on each folder:
 - queued_from_file (*best mode*):
+
 Record speaker audio every 10 seconds on a file with timestamp name inside ./sounds folder
 ```
 sh record-from-speaker.sh
