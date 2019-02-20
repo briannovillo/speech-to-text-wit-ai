@@ -1,13 +1,17 @@
 #!/bin/sh
 
+# Get all apt repos
+apt update
+
 # Install python and pip
-sudo apt install python3-pip
+apt install python3-pip -y
+pip3 install --upgrade pip3
 
 # Install sound libraries
-sudo apt install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0 ffmpeg libav-tools
+apt install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0 ffmpeg libav-tools -y
 
 # Install inotify-tools for watching folders
-sudo apt install inotify-tools
+apt install inotify-tools -y
 
 # Install pip libraries
-sudo pip install -r requirements.txt
+pip install -r requirements.txt
