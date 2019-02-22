@@ -15,7 +15,7 @@ def RecognizeSpeechAndRemoveFile(AUDIO_FILENAME):
     # send to WIT.AI
     recognize(audio)
 
-    time.sleep(10)
+    time.sleep(3)
 
 if __name__ == "__main__":
     text =  RecognizeSpeechAndRemoveFile(sys.argv[1])
